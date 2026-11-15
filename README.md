@@ -179,3 +179,4 @@ All 15 plots are rendered in `results/graphs/`:
 13. `prefetch_breakdown.png`: Timely vs. late vs. unused vs. redundant counts.
 14. `amat_comparison.png`: CPU stall latency and AMAT reduction.
 15. `boundary_validation.png`: Boundary safety test pass rates and blocked hazards.
+# Memory_Prefetching
