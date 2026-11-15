@@ -1,0 +1,30 @@
+=======================================================================
+  ML-BASED MEMORY PREFETCHING SYSTEM — COMPREHENSIVE EXPERIMENT REPORT 
+=======================================================================
+
+Best Model Selected        : Random Forest
+Validation Accuracy        : 95.63%
+Test Accuracy (20% heldout): 95.25%
+Unseen Workload Accuracy   : 95.45%
+Macro F1-Score             : 94.75%
+
+Baseline L1 Hit Rate       : 26.15%
+Adaptive L1 Hit Rate       : 32.69% (+6.54%)
+Baseline AMAT              : 191.30 cycles
+Adaptive AMAT              : 174.69 cycles (-16.61 cycles)
+Standard Prefetch Coverage : 8.87% (<= 100% verified)
+Useful Precision           : 99.49%
+Timely Precision           : 99.49%
+Cache Pollution Rate       : 0.51%
+Cross-Page Blocks          : 213
+Segment Overflow Blocks    : 1,767
+
+Model Comparison Table:
+              Model  Validation Accuracy (%)  Test Accuracy (%)  Inference Latency (ms/sample)  Training Time (s)
+      Random Forest                    95.63              95.25                         0.0177               1.63
+  Gradient Boosting                    95.50              95.08                         0.0346               2.16
+Compact MLP (32-16)                    95.13              94.93                         0.0008              14.17
+      Decision Tree                    94.99              90.86                         0.0012               0.28
+ Next-Line Baseline                    26.23              25.78                         0.0000               0.00
+
+All graphs generated in results/graphs/

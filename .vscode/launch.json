@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Run Main Pipeline",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Python: Evaluate Unseen Workload",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/evaluate_unseen.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Python: Run Leakage Checks",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/leakage_checker.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

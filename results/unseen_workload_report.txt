@@ -1,0 +1,23 @@
+=== UNSEEN WORKLOAD EVALUATION (Seed = 999) ===
+Total Accesses: 14,976
+Unseen Accuracy: 95.45%
+Unseen Macro Precision: 94.94%
+Unseen Macro Recall: 94.84%
+Unseen Macro F1-Score: 94.85%
+
+              precision    recall  f1-score   support
+
+   Stride +1     0.9670    0.9595    0.9632      3604
+   Stride +2     0.9276    0.9129    0.9202      1446
+   Stride +4     0.9754    0.9867    0.9811      2414
+   Stride +8     0.9686    0.9639    0.9662       831
+  Stride +16     0.9816    0.9751    0.9783      1204
+   Stride -1     0.9703    0.9477    0.9589      2104
+   Stride -2     0.9608    0.9511    0.9560       696
+   Stride -4     0.9626    0.9144    0.9379       479
+   Stride -8     0.9833    0.9711    0.9771      1210
+ No-Prefetch     0.7970    0.9018    0.8462       988
+
+    accuracy                         0.9545     14976
+   macro avg     0.9494    0.9484    0.9485     14976
+weighted avg     0.9560    0.9545    0.9550     14976

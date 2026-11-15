@@ -1,0 +1,13 @@
+{
+    "python.defaultInterpreterPath": "python",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}",
+        "${workspaceFolder}/src",
+        "${workspaceFolder}/simulation"
+    ],
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.pytest_cache": true
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell"
+}
