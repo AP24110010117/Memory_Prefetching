@@ -1,0 +1,4 @@
+total_accesses,hits,misses,hit_ratio,miss_ratio,evictions,prefetch_requests,useful_prefetches,unused_prefetches,prefetch_accuracy,prefetch_coverage,cache_pollution,average_memory_access_time,mode,policy,prefetch_requests_attempted,prefetch_accepted,prefetch_rejected,prediction_accuracy_on_steps,prefetch_timeliness
+240,0,240,0.0,1.0,232,0,0,0,0.0,0.0,0.0,100.0,normal,LRU,0,0,0,0.0,0.0
+240,0,240,0.0,1.0,235,3,0,3,0.0,0.0,1.0,100.0,basic,LRU,3,3,0,0.0,0.0
+240,31,209,0.12916666666666668,0.8708333333333333,232,31,31,0,1.0,0.12916666666666668,0.0,87.2125,ml,LRU,237,31,206,0.23628691983122363,0.12903225806451613
