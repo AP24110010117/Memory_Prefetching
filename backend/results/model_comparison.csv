@@ -1,6 +1,6 @@
 Model,Validation Accuracy (%),Test Accuracy (%),Inference Latency (ms/sample),Training Time (s)
-Random Forest,95.63,95.25,0.0332,3.34
-Gradient Boosting,95.5,95.08,0.1691,16.53
-Compact MLP (32-16),95.13,94.93,0.0015,45.4
-Decision Tree,94.99,90.86,0.0009,0.5
+Random Forest,95.66,95.3,0.0368,1.98
+Gradient Boosting,95.5,94.63,0.0212,8.77
+Compact MLP (32-16),95.06,94.61,0.0021,28.29
+Decision Tree,94.99,90.88,0.0007,0.46
 Next-Line Baseline,26.23,25.78,0.0,0.0

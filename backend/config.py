@@ -45,7 +45,7 @@ BLOCKS_PER_PAGE  = PAGE_SIZE_BYTES // BLOCK_SIZE_BYTES  # 64 blocks/page
 # ─── Memory Segments ─────────────────────────────────────────────────────────
 SEGMENTS = {
     "TEXT":  {"id": 0, "base": 0x00400000, "size_kb": 512,  "type": "Sequential/Loops"},
-    "DATA":  {"id": 1, "base": 0x10000000, "size_kb": 1024, "type": "Arrays/Matrices"},
+    "DATA":  {"id": 1, "base": 0x10000000, "size_kb": 2048, "type": "Arrays/Matrices"},
     "HEAP":  {"id": 2, "base": 0x60000000, "size_kb": 2048, "type": "Dynamic/Pointers"},
     "STACK": {"id": 3, "base": 0x7FFF00000000, "size_kb": 512, "type": "Frames/Reverse"},
 }

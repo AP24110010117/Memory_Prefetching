@@ -1,22 +1,22 @@
 Model: Random Forest
-Test Accuracy: 95.25%
-Macro Precision: 95.13%
-Macro Recall: 94.42%
-Macro F1-Score: 94.75%
+Test Accuracy: 95.30%
+Macro Precision: 95.18%
+Macro Recall: 94.45%
+Macro F1-Score: 94.79%
 
               precision    recall  f1-score   support
 
-   Stride +1     0.9549    0.9715    0.9631      1546
-   Stride +2     0.8786    0.9386    0.9076       586
-   Stride +4     0.9864    0.9875    0.9870       958
-   Stride +8     0.9752    0.9602    0.9676       327
+   Stride +1     0.9555    0.9722    0.9638      1546
+   Stride +2     0.8814    0.9386    0.9091       586
+   Stride +4     0.9865    0.9885    0.9875       958
+   Stride +8     0.9782    0.9602    0.9691       327
   Stride +16     0.9835    0.9765    0.9800       426
-   Stride -1     0.9711    0.9314    0.9509       831
+   Stride -1     0.9700    0.9326    0.9509       831
    Stride -2     0.9524    0.9524    0.9524       273
    Stride -4     0.9778    0.9263    0.9514       190
    Stride -8     0.9811    0.9519    0.9663       437
  No-Prefetch     0.8520    0.8460    0.8490       422
 
-    accuracy                         0.9525      5996
-   macro avg     0.9513    0.9442    0.9475      5996
-weighted avg     0.9531    0.9525    0.9526      5996
+    accuracy                         0.9530      5996
+   macro avg     0.9518    0.9445    0.9479      5996
+weighted avg     0.9536    0.9530    0.9531      5996

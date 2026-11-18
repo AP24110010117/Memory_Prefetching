@@ -3,28 +3,28 @@
 =======================================================================
 
 Best Model Selected        : Random Forest
-Validation Accuracy        : 95.63%
-Test Accuracy (20% heldout): 95.25%
-Unseen Workload Accuracy   : 95.45%
-Macro F1-Score             : 94.75%
+Validation Accuracy        : 95.66%
+Test Accuracy (20% heldout): 95.30%
+Unseen Workload Accuracy   : 95.51%
+Macro F1-Score             : 94.79%
 
 Baseline L1 Hit Rate       : 26.15%
-Adaptive L1 Hit Rate       : 32.69% (+6.54%)
+Adaptive L1 Hit Rate       : 33.32% (+7.17%)
 Baseline AMAT              : 191.30 cycles
-Adaptive AMAT              : 174.69 cycles (-16.61 cycles)
-Standard Prefetch Coverage : 8.87% (<= 100% verified)
-Useful Precision           : 99.49%
-Timely Precision           : 99.49%
-Cache Pollution Rate       : 0.51%
-Cross-Page Blocks          : 213
-Segment Overflow Blocks    : 1,767
+Adaptive AMAT              : 167.71 cycles (-23.59 cycles)
+Standard Prefetch Coverage : 17.87% (<= 100% verified)
+Useful Precision           : 100.00%
+Timely Precision           : 67.48%
+Cache Pollution Rate       : 32.11%
+Cross-Page Blocks          : 334
+Segment Overflow Blocks    : 0
 
 Model Comparison Table:
               Model  Validation Accuracy (%)  Test Accuracy (%)  Inference Latency (ms/sample)  Training Time (s)
-      Random Forest                    95.63              95.25                         0.0332               3.34
-  Gradient Boosting                    95.50              95.08                         0.1691              16.53
-Compact MLP (32-16)                    95.13              94.93                         0.0015              45.40
-      Decision Tree                    94.99              90.86                         0.0009               0.50
+      Random Forest                    95.66              95.30                         0.0368               1.98
+  Gradient Boosting                    95.50              94.63                         0.0212               8.77
+Compact MLP (32-16)                    95.06              94.61                         0.0021              28.29
+      Decision Tree                    94.99              90.88                         0.0007               0.46
  Next-Line Baseline                    26.23              25.78                         0.0000               0.00
 
 All graphs generated in results/graphs/

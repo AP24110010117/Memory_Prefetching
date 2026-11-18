@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parent
 FRONTEND = ROOT.parent / "frontend"
 app = Flask(__name__, static_folder=None)
 run_lock = threading.Lock()
-run_state = {"running": False, "return_code": None, "message": "Ready"}
+run_state = {"running": False, "return_code": None, "message": "Ready", "run_id": 0}
 
 
 @app.get("/")
@@ -51,15 +51,22 @@ def results():
 
 def _run_pipeline():
     try:
-        result = subprocess.run([sys.executable, "main.py"], cwd=ROOT, capture_output=True, text=True)
+        result = subprocess.run(
+            [sys.executable, "-u", "main.py"], cwd=ROOT,
+            stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True,
+            encoding="utf-8", errors="replace", timeout=3600,
+        )
         if result.returncode == 0:
-            export = subprocess.run([sys.executable, "export_data.py"], cwd=ROOT, capture_output=True, text=True)
+            export = subprocess.run(
+                [sys.executable, "export_data.py"], cwd=ROOT, capture_output=True,
+                text=True, encoding="utf-8", errors="replace", timeout=120,
+            )
             if export.returncode:
                 raise RuntimeError(export.stderr[-1200:] or "Could not refresh dashboard data")
             run_state.update(running=False, return_code=0, message="Pipeline completed and dashboard refreshed")
         else:
             run_state.update(running=False, return_code=result.returncode,
-                             message=(result.stderr or result.stdout)[-1600:] or "Pipeline failed")
+                             message=(result.stdout or "Pipeline failed")[-2000:])
     except Exception as exc:
         run_state.update(running=False, return_code=1, message=str(exc))
     finally:
@@ -70,7 +77,8 @@ def _run_pipeline():
 def start_pipeline():
     if not run_lock.acquire(blocking=False):
         return jsonify({"started": False, "message": "A pipeline run is already in progress"}), 409
-    run_state.update(running=True, return_code=None, message="Generating data, training models, and refreshing results…")
+    run_state.update(running=True, return_code=None, message="Generating data, training models, and refreshing results…",
+                     run_id=run_state["run_id"] + 1)
     threading.Thread(target=_run_pipeline, daemon=True).start()
     return jsonify({"started": True, **run_state}), 202
 

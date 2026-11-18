@@ -1,9 +1,9 @@
 configuration,num_features,val_accuracy,train_time_s
-Full Model,30,95.7,0.57
-No Cache Features,25,95.7,0.93
-No Page Features,25,95.66,0.66
-No Segment Features,24,95.46,0.74
-No Stride History,19,74.01,1.33
-Seg+Cache Only,11,69.27,0.33
-Page+Seg Only,11,49.32,0.38
-Page+Cache Only,10,45.85,0.34
+Full Model,30,95.7,0.28
+No Page Features,25,95.7,0.27
+No Cache Features,25,95.5,0.26
+No Segment Features,24,95.46,0.26
+No Stride History,19,72.31,0.28
+Seg+Cache Only,11,62.23,0.52
+Page+Seg Only,11,49.32,0.41
+Page+Cache Only,10,45.85,2.03

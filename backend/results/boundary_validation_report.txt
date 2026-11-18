@@ -6,7 +6,7 @@
  TEXT: Backward Page Cross    TEXT            -4            2                61    BLOCKED_PAGE_BOUNDARY    BLOCKED_PAGE_BOUNDARY PASSED
         DATA: Strided Safe    DATA             4           20                43                     SAFE                     SAFE PASSED
   DATA: Large Stride Cross    DATA            16           55                 8    BLOCKED_PAGE_BOUNDARY    BLOCKED_PAGE_BOUNDARY PASSED
-    DATA: Segment Overflow    DATA            16           10                53 BLOCKED_SEGMENT_BOUNDARY BLOCKED_SEGMENT_BOUNDARY PASSED
+    DATA: Segment Overflow    DATA            16           10                53 BLOCKED_SEGMENT_BOUNDARY                     SAFE FAILED
    HEAP: Pointer Step Safe    HEAP             2           30                33                     SAFE                     SAFE PASSED
 HEAP: Page Boundary Hazard    HEAP             8           60                 3    BLOCKED_PAGE_BOUNDARY    BLOCKED_PAGE_BOUNDARY PASSED
  HEAP: Heap Limit Exceeded    HEAP            16           20                43 BLOCKED_SEGMENT_BOUNDARY BLOCKED_SEGMENT_BOUNDARY PASSED
@@ -15,5 +15,5 @@ STACK: Backward Page Cross   STACK            -2            1                62 
      STACK: Stack Overflow   STACK           -16           30                33 BLOCKED_SEGMENT_BOUNDARY BLOCKED_SEGMENT_BOUNDARY PASSED
 
 Total Boundary Tests: 12
-Passed: 12
-Failed: 0
+Passed: 11
+Failed: 1
